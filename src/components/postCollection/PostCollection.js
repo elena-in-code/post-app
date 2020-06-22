@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchPosts } from '../../store/actions';
 import Post from '../post/Post';
+import Title from '../title/Title';
+import './styles.scss';
 
 const PostCollection = ({ posts, getPosts }) => {
   useEffect(() => {
@@ -10,21 +12,32 @@ const PostCollection = ({ posts, getPosts }) => {
   }, []);
 
   return (
-    <section>
-      {posts.map((post) => (
-        <Post
-          key={post.id}
-          title={post.title}
-          user={post.user}
-          body={post.body}
-        />
-      ))}
-    </section>
+    <>
+      <Title level="secondary" titleContent="Posts Wall" />
+
+      <section className="post-collection">
+        {posts.map((post) => (
+          <Post
+            key={post.id}
+            title={post.title}
+            user={post.userId}
+            body={post.body}
+          />
+        ))}
+      </section>
+    </>
   );
 };
 
 PostCollection.propTypes = {
-  posts: PropTypes.arrayOf.isRequired,
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      body: PropTypes.string,
+      id: PropTypes.number,
+      title: PropTypes.string,
+      userId: PropTypes.number,
+    })
+  ).isRequired,
   getPosts: PropTypes.func.isRequired,
 };
 

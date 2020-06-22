@@ -1,0 +1,7 @@
+@import '../../scss/main';
+
+.post-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

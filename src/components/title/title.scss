@@ -1,4 +1,19 @@
+@import '../../scss/main';
+
 .title {
-  color: #4c7aa2;
   text-align: center;
+}
+
+.primary {
+  color: $dark-blue;
+}
+
+.secondary {
+  background: $light-grey;
+  padding: 10px;
+  color: $dark-grey;
+}
+
+.tertiary {
+  color: $bright-blue;
 }

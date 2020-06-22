@@ -11,7 +11,7 @@ const headingLevel = {
 const Title = (props) => {
   const { level, titleContent } = props;
   const TitleTag = headingLevel[level];
-  return <TitleTag className="title">{titleContent}</TitleTag>;
+  return <TitleTag className={`title ${level}`}>{titleContent}</TitleTag>;
 };
 
 Title.propTypes = {
