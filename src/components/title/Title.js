@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './title.scss';
+import './styles.scss';
 
 const headingLevel = {
   primary: 'h1',

@@ -1,0 +1,8 @@
+$mobile-width: 480px;
+
+// above mobile size
+@mixin desktop {
+  @media (min-width: #{$mobile-width}) {
+    @content;
+  }
+}

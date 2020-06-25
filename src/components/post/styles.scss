@@ -1,12 +1,16 @@
 @import '../../scss/main';
 
 .post__wrapper {
-  border: 10px solid $light-grey;
+  border: 1px solid $light-grey;
   margin: 10px 0;
   padding: 10px;
   max-width: 45%;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  min-width: 380px;
+  min-width: 320px;
+
+  @include desktop {
+    border: 10px solid $light-grey;
+  }
 }
